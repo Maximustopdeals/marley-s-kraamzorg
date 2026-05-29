@@ -2,189 +2,214 @@
 
 import Link from "next/link";
 
-export default function CookiePolicyPage() {
+const sitemapLinks = [
+  { label: "Home", href: "/" },
+  { label: "Over mij", href: "/over-mij/" },
+  { label: "Kraamzorg", href: "/kraamzorg/" },
+  { label: "Reviews", href: "/reviews/" },
+  { label: "Werkgebied", href: "/werkgebied/" },
+  { label: "Contact", href: "/contact/" },
+];
+
+const samenwerkingen = [
+  { label: "Verloskundigen aan de Schie", href: "https://verloskundigen-aandeschie.nl/" },
+  { label: "IVE Verloskundigen", href: "https://www.ive-verloskundigen.nl/" },
+  { label: "VIVE Verloskundigen", href: "https://www.viveverloskundigen.nl/" },
+  { label: "Cindy's Kraamzorg", href: "https://cindyskraamzorg.nl/" },
+];
+
+const certificeringen = [
+  {
+    label: "KCKZ",
+    href: "https://www.kckz.nl/",
+    sub: "Kraamzorg Certificatie",
+  },
+  {
+    label: "Kraammarkt",
+    href: "https://kraammarkt.nl/",
+    sub: "Dienstverlening aan kraamverzorgenden",
+  },
+  {
+    label: "Kiwa",
+    href: "https://www.kiwa.com/nl/nl/",
+    sub: "Gecertificeerd",
+  },
+];
+
+function ExternalLink({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
   return (
-    <>
-      {/* ═══════ HERO SECTION ═══════ */}
-      <section
-        className="relative w-full min-h-[40vh] md:min-h-[35vh] overflow-hidden flex items-center justify-center bg-[#FFF5FA]"
-      >
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12">
-          <div className="inline-flex items-center gap-2 bg-white/70 border border-gray-300 rounded-full px-5 py-2 mb-6">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
-              <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-            </svg>
-            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-gray-500">
-              Privacy & Cookies
-            </span>
-          </div>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
 
-          <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase leading-tight tracking-tight mb-6" style={{ color: "#9A1E61" }}>
-            Cookiebeleid
-          </h1>
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
 
-          <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6" style={{ opacity: 0.3 }} />
+  return (
+    <footer
+      className="relative text-cream overflow-hidden"
+      style={{ backgroundColor: "#541036" }}
+    >
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(180deg, rgba(120,40,80,0.4) 0%, rgba(84,16,54,1) 15%, rgba(84,16,54,1) 85%, rgba(60,10,38,0.95) 100%)",
+        }}
+      />
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background: "linear-gradient(90deg, transparent 0%, rgba(154,30,97,0.2) 50%, transparent 100%)",
+        }}
+      />
 
-          <p className="font-body text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Marley&apos;s Kraamzorg — Rotterdam
-          </p>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gray-400">
-          <span className="text-xs font-cinzel uppercase tracking-wider">Scroll</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-bounce-gentle">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </section>
-
-      {/* ═══════ COOKIE POLICY CONTENT ═══════ */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="prose prose-lg max-w-none">
-            <div className="mb-12">
-              <h2 className="font-cinzel text-2xl md:text-3xl mb-4" style={{ color: "#9A1E61" }}>
-                Cookieverklaring
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Welkom op de website van Marley&apos;s Kraamzorg. Wij vinden uw privacy belangrijk en gaan zorgvuldig om met persoonsgegevens. Op deze pagina leggen wij uit welke cookies wij gebruiken, waarom wij deze gebruiken en hoe u uw voorkeuren kunt beheren.
+      <div className="relative z-10">
+        <div className="container-main pt-20 md:pt-24 pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            <div>
+              <Link href="/" className="inline-block mb-6">
+                <img
+                  src="https://www.marleyskraamzorg.nl/wp-content/uploads/2026/05/Transparant-logo-MarleysKraamzorg.webp"
+                  alt="Marley's Kraamzorg"
+                  className="h-16 w-auto"
+                />
+              </Link>
+              <p className="text-cream/80 text-sm leading-relaxed mb-6">
+                Persoonlijke kraamzorg in Rotterdam met 1 vast gezicht
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                Door gebruik te maken van onze website gaat u akkoord met het gebruik van cookies zoals beschreven in deze verklaring.
-              </p>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
-                Wat zijn cookies?
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Cookies zijn kleine tekstbestanden die tijdens uw bezoek aan onze website op uw computer, tablet of smartphone worden opgeslagen. Deze bestanden helpen de website correct te functioneren en geven ons inzicht in het gebruik van de website, zodat wij onze dienstverlening kunnen verbeteren.
-              </p>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="font-cinzel text-xl mb-6" style={{ color: "#9A1E61" }}>
-                Welke cookies gebruiken wij?
-              </h3>
-
-              <div className="mb-8 bg-[#FFF5FA] rounded-2xl p-6">
-                <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
-                  1. Functionele cookies
-                </h4>
-                <p className="text-gray-700 leading-relaxed mb-3">
-                  Deze cookies zijn noodzakelijk voor het goed functioneren van de website. Zonder deze cookies kunnen bepaalde onderdelen van de website niet correct werken.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-2 font-semibold">Voorbeelden:</p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Het onthouden van cookievoorkeuren</li>
-                  <li>Beveiliging van formulieren</li>
-                  <li>Correct functioneren van de website op verschillende apparaten</li>
-                </ul>
-                <p className="text-gray-600 text-sm mt-3 italic">
-                  Deze cookies verzamelen geen persoonlijke gegevens.
-                </p>
-              </div>
-
-              <div className="mb-8 bg-gray-50 rounded-2xl p-6">
-                <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
-                  2. Analytische cookies
-                </h4>
-                <p className="text-gray-700 leading-relaxed mb-3">
-                  Wij gebruiken analytische cookies om inzicht te krijgen in het gebruik van onze website. Hiermee kunnen wij de prestaties van de website verbeteren en de gebruikservaring optimaliseren.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-2 font-semibold">Wij gebruiken onder andere:</p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Google Analytics</li>
-                </ul>
-                <p className="text-gray-600 text-sm mt-3 italic">
-                  De gegevens worden zoveel mogelijk geanonimiseerd en niet gebruikt om bezoekers persoonlijk te identificeren.
-                </p>
-              </div>
-
-              <div className="mb-8 bg-[#FFF5FA] rounded-2xl p-6">
-                <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
-                  3. Marketing- en trackingcookies
-                </h4>
-                <p className="text-gray-700 leading-relaxed mb-3">
-                  Met marketingcookies kunnen wij relevante informatie en advertenties tonen via externe platforms zoals Google of social media.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-2 font-semibold">Deze cookies kunnen bijvoorbeeld gebruikt worden voor:</p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Het meten van advertentieprestaties</li>
-                  <li>Remarketingcampagnes</li>
-                  <li>Het tonen van relevante content</li>
-                </ul>
-                <p className="text-gray-600 text-sm mt-3 italic">
-                  Deze cookies worden alleen geplaatst nadat u hiervoor toestemming heeft gegeven.
-                </p>
+              <div className="space-y-2 text-cream/60 text-xs">
+                <p>KvK: 92463398</p>
+                <p>KCKZ: 218156</p>
               </div>
             </div>
 
-            <div className="mb-12">
-              <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
-                Cookies beheren of uitschakelen
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-3">
-                Bij uw eerste bezoek aan onze website kunt u uw cookievoorkeuren instellen via de cookiebanner.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-3">
-                U kunt cookies daarnaast altijd verwijderen of blokkeren via de instellingen van uw browser. Houd er rekening mee dat sommige onderdelen van de website hierdoor mogelijk minder goed functioneren.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-2 font-semibold">
-                Meer informatie over het beheren van cookies vindt u via de helpfunctie van uw browser:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                <li>Google Chrome</li>
-                <li>Mozilla Firefox</li>
-                <li>Safari</li>
-                <li>Microsoft Edge</li>
+            <div>
+              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+                Sitemap
+              </h4>
+              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
+              <ul className="space-y-3">
+                {sitemapLinks.map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      className="text-cream/80 text-sm hover:text-cream transition-colors duration-150"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <div className="mb-12">
-              <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
-                Persoonsgegevens en privacy
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Voor meer informatie over hoe wij omgaan met persoonsgegevens verwijzen wij u naar onze privacyverklaring.
-              </p>
+            <div>
+              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+                Contact
+              </h4>
+              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
+              <div className="space-y-4 text-sm text-cream/80">
+                <p className="flex items-start gap-2">
+                  <span>📍</span>
+                  <span>Dr. J.J.P. Oudsingel 62, Rotterdam</span>
+                </p>
+                <a
+                  href="tel:+31645041484"
+                  className="flex items-center gap-2 hover:text-cream transition-colors"
+                >
+                  <span>📞</span>
+                  <span>06 - 450 414 84</span>
+                </a>
+                <a
+                  href="mailto:info@marleyskraamzorg.nl"
+                  className="flex items-center gap-2 hover:text-cream transition-colors"
+                >
+                  <span>✉️</span>
+                  <span>info@marleyskraamzorg.nl</span>
+                </a>
+              </div>
             </div>
 
-            <div className="mb-12">
-              <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
-                Wijzigingen in deze cookieverklaring
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Marley&apos;s Kraamzorg behoudt zich het recht voor deze cookieverklaring te wijzigen. Wij adviseren u deze pagina regelmatig te raadplegen zodat u op de hoogte blijft van eventuele wijzigingen.
-              </p>
-            </div>
-
-            <div className="bg-[#FFF5FA] rounded-2xl p-8 text-center">
-              <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
-                Contactgegevens
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-2">
-                <strong>Marley&apos;s Kraamzorg</strong><br />
-                Rotterdam, Nederland
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Heeft u vragen over ons cookiebeleid of uw privacy? Neem dan gerust contact met ons op via het contactformulier op onze website.
-              </p>
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300"
-                style={{ backgroundColor: "#9A1E61", color: "white" }}
-              >
-                Ga naar contactformulier
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div>
+              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+                Samenwerkingen
+              </h4>
+              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
+              <ul className="space-y-3">
+                {samenwerkingen.map((s) => (
+                  <li key={s.href}>
+                    <ExternalLink
+                      href={s.href}
+                      className="text-cream/80 text-sm hover:text-cream transition-colors duration-150 flex items-center gap-2"
+                    >
+                      <span className="text-cream/40">✦</span>
+                      {s.label}
+                    </ExternalLink>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        <div className="border-t border-cream/[0.08]">
+          <div className="container-main py-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+              {certificeringen.map((cert) => (
+                <ExternalLink
+                  key={cert.label}
+                  href={cert.href}
+                  className="text-center group"
+                >
+                  <div className="text-cream/70 text-sm font-cinzel uppercase tracking-wider group-hover:text-cream transition-colors">
+                    {cert.label}
+                  </div>
+                  <div className="text-cream/45 text-[10px] mt-0.5">
+                    {cert.sub}
+                  </div>
+                </ExternalLink>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright rij - Cookie Policy opent in nieuw venster */}
+        <div className="border-t border-cream/[0.06]">
+          <div className="container-main py-6">
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <p className="text-cream/50 text-xs">
+                &copy; {currentYear} Marley&apos;s Kraamzorg — Persoonlijke kraamzorg in Rotterdam met 1 vast gezicht
+              </p>
+
+              {/* Cookie Policy link - opent in nieuw venster naar aparte pagina */}
+              <Link
+                href="/cookie-policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/50 text-xs hover:text-cream transition-colors"
+              >
+                Cookie Policy
+              </Link>
+
+              <p className="text-cream/50 text-xs">
+                Webdesign door{" "}
+                <ExternalLink
+                  href="https://www.webboostpartner.nl/"
+                  className="underline hover:text-cream transition-colors"
+                >
+                  Webboostpartner
+                </ExternalLink>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
