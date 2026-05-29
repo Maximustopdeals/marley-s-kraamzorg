@@ -187,16 +187,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright rij */}
+        {/* Copyright rij - GECENTREERD */}
         <div className="border-t border-cream/[0.06]">
           <div className="container-main py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-              {/* Links */}
+            {/* Alles gecentreerd in één kolom */}
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              {/* Copyright tekst */}
               <p className="text-cream/50 text-xs">
                 &copy; {currentYear} Marley&apos;s Kraamzorg — Persoonlijke kraamzorg in Rotterdam met 1 vast gezicht
               </p>
 
-              {/* Midden */}
+              {/* Cookie Policy link */}
               <Link
                 href="/cookie-policy/"
                 className="text-cream/50 text-xs hover:text-cream transition-colors"
@@ -204,7 +205,7 @@ export default function Footer() {
                 Cookie Policy
               </Link>
 
-              {/* Rechts */}
+              {/* Webdesign credit */}
               <p className="text-cream/50 text-xs">
                 Webdesign door{" "}
                 <ExternalLink
