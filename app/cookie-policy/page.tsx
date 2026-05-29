@@ -23,7 +23,7 @@ export default function CookiePolicyPage() {
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-6"
             style={{
               backgroundColor: "rgba(255,255,255,0.7)",
-              border: "1px solid rgba(74, 26, 61, 0.1)",
+              border: "1px solid rgba(84, 16, 54, 0.15)",
             }}
           >
             <svg
@@ -40,7 +40,7 @@ export default function CookiePolicyPage() {
               className="text-xs uppercase tracking-[0.12em]"
               style={{
                 color: "#4A1A3D",
-                opacity: 0.8,
+                opacity: 0.7,
                 fontFamily: "Cinzel, Georgia, serif",
               }}
             >
@@ -48,6 +48,7 @@ export default function CookiePolicyPage() {
             </span>
           </div>
 
+          {/* Titel in huisstijl kleur */}
           <h1
             className="text-3xl md:text-4xl lg:text-5xl uppercase leading-tight tracking-tight mb-6"
             style={{
@@ -59,13 +60,13 @@ export default function CookiePolicyPage() {
           </h1>
           <div
             className="w-16 h-0.5 mx-auto mb-6"
-            style={{ backgroundColor: "rgba(74, 26, 61, 0.2)" }}
+            style={{ backgroundColor: "#9A1E61", opacity: 0.3 }}
           />
+          {/* Subtitel in zwart/grijs */}
           <p
             className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
             style={{
-              color: "#4A1A3D",
-              opacity: 0.85,
+              color: "#333333",
               fontFamily: "var(--font-open-sans), system-ui, sans-serif",
             }}
           >
@@ -90,8 +91,7 @@ export default function CookiePolicyPage() {
               <p
                 className="text-base md:text-lg leading-relaxed"
                 style={{
-                  color: "#4A1A3D",
-                  opacity: 0.9,
+                  color: "#333333",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
@@ -103,8 +103,7 @@ export default function CookiePolicyPage() {
               <p
                 className="text-sm leading-relaxed mt-4 italic"
                 style={{
-                  color: "#4A1A3D",
-                  opacity: 0.7,
+                  color: "#666666",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
@@ -139,8 +138,7 @@ export default function CookiePolicyPage() {
                 <p
                   className="text-sm md:text-base leading-relaxed"
                   style={{
-                    color: "#4A1A3D",
-                    opacity: 0.85,
+                    color: "#333333",
                     fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                   }}
                 >
@@ -185,7 +183,7 @@ export default function CookiePolicyPage() {
                   <h3
                     className="text-sm uppercase tracking-wider mb-3"
                     style={{
-                      color: "#9A1E61",
+                      color: "#4A1A3D",
                       fontFamily: "Cinzel, Georgia, serif",
                     }}
                   >
@@ -194,10 +192,8 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-sm md:text-base leading-relaxed mb-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.85,
-                      fontFamily:
-                        "var(--font-open-sans), system-ui, sans-serif",
+                      color: "#333333",
+                      fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
                     Deze cookies zijn noodzakelijk voor het goed functioneren
@@ -214,8 +210,7 @@ export default function CookiePolicyPage() {
                         key={i}
                         className="flex items-start gap-3 text-sm"
                         style={{
-                          color: "#4A1A3D",
-                          opacity: 0.75,
+                          color: "#555555",
                           fontFamily:
                             "var(--font-open-sans), system-ui, sans-serif",
                         }}
@@ -233,8 +228,7 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-xs italic mt-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.6,
+                      color: "#888888",
                       fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
@@ -250,7 +244,7 @@ export default function CookiePolicyPage() {
                   <h3
                     className="text-sm uppercase tracking-wider mb-3"
                     style={{
-                      color: "#9A1E61",
+                      color: "#4A1A3D",
                       fontFamily: "Cinzel, Georgia, serif",
                     }}
                   >
@@ -259,10 +253,8 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-sm md:text-base leading-relaxed mb-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.85,
-                      fontFamily:
-                        "var(--font-open-sans), system-ui, sans-serif",
+                      color: "#333333",
+                      fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
                     Wij gebruiken analytische cookies om inzicht te krijgen in
@@ -273,20 +265,18 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-sm"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.75,
+                      color: "#555555",
                       fontFamily:
                         "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
-                    Wij gebruiken onder andere:{""}
-                    <span className="font-semibold"> Google Analytics</span>
+                    Wij gebruiken onder andere:{" "}
+                    <span className="font-semibold" style={{ color: "#4A1A3D" }}>Google Analytics</span>
                   </p>
                   <p
                     className="text-xs italic mt-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.6,
+                      color: "#888888",
                       fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
@@ -303,7 +293,7 @@ export default function CookiePolicyPage() {
                   <h3
                     className="text-sm uppercase tracking-wider mb-3"
                     style={{
-                      color: "#9A1E61",
+                      color: "#4A1A3D",
                       fontFamily: "Cinzel, Georgia, serif",
                     }}
                   >
@@ -312,10 +302,8 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-sm md:text-base leading-relaxed mb-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.85,
-                      fontFamily:
-                        "var(--font-open-sans), system-ui, sans-serif",
+                      color: "#333333",
+                      fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
                     Met marketingcookies kunnen wij relevante informatie en
@@ -332,8 +320,7 @@ export default function CookiePolicyPage() {
                         key={i}
                         className="flex items-start gap-3 text-sm"
                         style={{
-                          color: "#4A1A3D",
-                          opacity: 0.75,
+                          color: "#555555",
                           fontFamily:
                             "var(--font-open-sans), system-ui, sans-serif",
                         }}
@@ -351,8 +338,7 @@ export default function CookiePolicyPage() {
                   <p
                     className="text-xs italic mt-4"
                     style={{
-                      color: "#4A1A3D",
-                      opacity: 0.6,
+                      color: "#888888",
                       fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                     }}
                   >
@@ -389,8 +375,7 @@ export default function CookiePolicyPage() {
                 <p
                   className="text-sm md:text-base leading-relaxed mb-4"
                   style={{
-                    color: "#4A1A3D",
-                    opacity: 0.85,
+                    color: "#333333",
                     fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                   }}
                 >
@@ -400,8 +385,7 @@ export default function CookiePolicyPage() {
                 <p
                   className="text-sm md:text-base leading-relaxed mb-6"
                   style={{
-                    color: "#4A1A3D",
-                    opacity: 0.85,
+                    color: "#333333",
                     fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                   }}
                 >
@@ -502,8 +486,7 @@ export default function CookiePolicyPage() {
                 <p
                   className="text-sm md:text-base leading-relaxed"
                   style={{
-                    color: "#4A1A3D",
-                    opacity: 0.85,
+                    color: "#333333",
                     fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                   }}
                 >
@@ -539,8 +522,7 @@ export default function CookiePolicyPage() {
                 <p
                   className="text-sm md:text-base leading-relaxed"
                   style={{
-                    color: "#4A1A3D",
-                    opacity: 0.85,
+                    color: "#333333",
                     fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                   }}
                 >
@@ -585,18 +567,16 @@ export default function CookiePolicyPage() {
               <p
                 className="text-sm md:text-base leading-relaxed mb-2"
                 style={{
-                  color: "#4A1A3D",
-                  opacity: 0.85,
+                  color: "#333333",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
-                <span className="font-semibold">Marley&apos;s Kraamzorg</span>
+                <span className="font-semibold" style={{ color: "#4A1A3D" }}>Marley&apos;s Kraamzorg</span>
               </p>
               <p
                 className="text-sm mb-4"
                 style={{
-                  color: "#4A1A3D",
-                  opacity: 0.75,
+                  color: "#555555",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
@@ -605,8 +585,7 @@ export default function CookiePolicyPage() {
               <p
                 className="text-sm"
                 style={{
-                  color: "#4A1A3D",
-                  opacity: 0.85,
+                  color: "#333333",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
@@ -627,8 +606,7 @@ export default function CookiePolicyPage() {
             <p
               className="text-xs text-center pt-4"
               style={{
-                color: "#4A1A3D",
-                opacity: 0.4,
+                color: "#888888",
                 fontFamily: "var(--font-open-sans), system-ui, sans-serif",
               }}
             >
