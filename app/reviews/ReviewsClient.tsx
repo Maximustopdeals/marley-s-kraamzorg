@@ -7,7 +7,7 @@ export default function ReviewsClient() {
     <>
       {/* ═══════ HERO ═══════ */}
       <section
-        className="relative w-full min-h-[60vh] md:min-h-[55vh] overflow-hidden flex items-center justify-center bg-[#F5EDE3]"
+        className="relative w-full min-h-[60vh] md:min-h-[55vh] overflow-hidden flex items-center justify-center bg-[#FFF5FA]"
       >
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
           {/* Badge */}
