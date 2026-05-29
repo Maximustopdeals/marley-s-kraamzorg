@@ -10,7 +10,6 @@ export default function CookiePolicyPage() {
         className="relative w-full min-h-[40vh] md:min-h-[35vh] overflow-hidden flex items-center justify-center bg-[#FFF5FA]"
       >
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/70 border border-gray-300 rounded-full px-5 py-2 mb-6">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
               <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -20,21 +19,17 @@ export default function CookiePolicyPage() {
             </span>
           </div>
 
-          {/* Titel */}
           <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase leading-tight tracking-tight mb-6" style={{ color: "#9A1E61" }}>
             Cookiebeleid
           </h1>
 
-          {/* Lijn onder titel */}
           <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6" style={{ opacity: 0.3 }} />
 
-          {/* Subtitel */}
           <p className="font-body text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
             Marley&apos;s Kraamzorg — Rotterdam
           </p>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gray-400">
           <span className="text-xs font-cinzel uppercase tracking-wider">Scroll</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-bounce-gentle">
@@ -47,7 +42,6 @@ export default function CookiePolicyPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4">
           <div className="prose prose-lg max-w-none">
-            {/* Inleiding */}
             <div className="mb-12">
               <h2 className="font-cinzel text-2xl md:text-3xl mb-4" style={{ color: "#9A1E61" }}>
                 Cookieverklaring
@@ -60,7 +54,6 @@ export default function CookiePolicyPage() {
               </p>
             </div>
 
-            {/* Wat zijn cookies? */}
             <div className="mb-12">
               <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
                 Wat zijn cookies?
@@ -70,13 +63,11 @@ export default function CookiePolicyPage() {
               </p>
             </div>
 
-            {/* Welke cookies gebruiken wij? */}
             <div className="mb-12">
               <h3 className="font-cinzel text-xl mb-6" style={{ color: "#9A1E61" }}>
                 Welke cookies gebruiken wij?
               </h3>
 
-              {/* Functionele cookies */}
               <div className="mb-8 bg-[#FFF5FA] rounded-2xl p-6">
                 <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
                   1. Functionele cookies
@@ -95,7 +86,6 @@ export default function CookiePolicyPage() {
                 </p>
               </div>
 
-              {/* Analytische cookies */}
               <div className="mb-8 bg-gray-50 rounded-2xl p-6">
                 <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
                   2. Analytische cookies
@@ -112,7 +102,6 @@ export default function CookiePolicyPage() {
                 </p>
               </div>
 
-              {/* Marketing- en trackingcookies */}
               <div className="mb-8 bg-[#FFF5FA] rounded-2xl p-6">
                 <h4 className="font-cinzel text-lg mb-3" style={{ color: "#9A1E61" }}>
                   3. Marketing- en trackingcookies
@@ -132,7 +121,6 @@ export default function CookiePolicyPage() {
               </div>
             </div>
 
-            {/* Cookies beheren */}
             <div className="mb-12">
               <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
                 Cookies beheren of uitschakelen
@@ -154,7 +142,6 @@ export default function CookiePolicyPage() {
               </ul>
             </div>
 
-            {/* Persoonsgegevens */}
             <div className="mb-12">
               <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
                 Persoonsgegevens en privacy
@@ -164,7 +151,6 @@ export default function CookiePolicyPage() {
               </p>
             </div>
 
-            {/* Wijzigingen */}
             <div className="mb-12">
               <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
                 Wijzigingen in deze cookieverklaring
@@ -174,7 +160,6 @@ export default function CookiePolicyPage() {
               </p>
             </div>
 
-            {/* Contactgegevens */}
             <div className="bg-[#FFF5FA] rounded-2xl p-8 text-center">
               <h3 className="font-cinzel text-xl mb-4" style={{ color: "#9A1E61" }}>
                 Contactgegevens
