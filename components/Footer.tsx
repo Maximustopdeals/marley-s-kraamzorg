@@ -187,7 +187,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright rij - GECENTREERD */}
+        {/* Copyright rij - GECENTREERD met werkende cookie link */}
         <div className="border-t border-cream/[0.06]">
           <div className="container-main py-6">
             {/* Alles gecentreerd in één kolom */}
@@ -197,13 +197,13 @@ export default function Footer() {
                 &copy; {currentYear} Marley&apos;s Kraamzorg — Persoonlijke kraamzorg in Rotterdam met 1 vast gezicht
               </p>
 
-              {/* Cookie Policy link */}
-              <Link
-                href="/cookie-policy/"
+              {/* Cookie Policy link - opent in nieuw venster naar externe bron */}
+              <ExternalLink
+                href="https://www.websitepolicies.com/nl/cookie-policy-generator"
                 className="text-cream/50 text-xs hover:text-cream transition-colors"
               >
                 Cookie Policy
-              </Link>
+              </ExternalLink>
 
               {/* Webdesign credit */}
               <p className="text-cream/50 text-xs">
