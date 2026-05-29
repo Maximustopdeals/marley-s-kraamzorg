@@ -15,15 +15,15 @@ export default function CookiePolicyPage() {
       {/* ═══════ HERO ═══════ */}
       <section
         className="relative w-full overflow-hidden flex items-center justify-center py-20 md:py-28"
-        style={{ backgroundColor: "#F5EDE3" }}
+        style={{ backgroundColor: "#9A1E61" }}
       >
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-6"
             style={{
-              backgroundColor: "rgba(255,255,255,0.7)",
-              border: "1px solid rgba(84, 16, 54, 0.15)",
+              backgroundColor: "rgba(255,255,255,0.15)",
+              border: "1px solid rgba(255,255,255,0.2)",
             }}
           >
             <svg
@@ -31,16 +31,14 @@ export default function CookiePolicyPage() {
               height="14"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#9A1E61"
+              stroke="#FFFFFF"
               strokeWidth="2"
             >
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
             <span
-              className="text-xs uppercase tracking-[0.12em]"
+              className="text-xs uppercase tracking-[0.12em] text-white/80"
               style={{
-                color: "#4A1A3D",
-                opacity: 0.7,
                 fontFamily: "Cinzel, Georgia, serif",
               }}
             >
@@ -48,11 +46,10 @@ export default function CookiePolicyPage() {
             </span>
           </div>
 
-          {/* Titel in huisstijl kleur */}
+          {/* Titel in wit */}
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl uppercase leading-tight tracking-tight mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl uppercase leading-tight tracking-tight mb-6 text-white"
             style={{
-              color: "#4A1A3D",
               fontFamily: "Cinzel, Georgia, serif",
             }}
           >
@@ -60,13 +57,12 @@ export default function CookiePolicyPage() {
           </h1>
           <div
             className="w-16 h-0.5 mx-auto mb-6"
-            style={{ backgroundColor: "#9A1E61", opacity: 0.3 }}
+            style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
           />
-          {/* Subtitel in zwart/grijs */}
+          {/* Subtitel in wit */}
           <p
-            className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-white/90"
             style={{
-              color: "#333333",
               fontFamily: "var(--font-open-sans), system-ui, sans-serif",
             }}
           >
@@ -80,7 +76,7 @@ export default function CookiePolicyPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="container-main">
           <div className="max-w-4xl mx-auto">
-            {/* Intro kaart */}
+            {/* Intro kaart - blijft crème */}
             <div
               className="rounded-2xl p-8 md:p-10 mb-10"
               style={{
@@ -116,7 +112,7 @@ export default function CookiePolicyPage() {
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-6">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm flex-shrink-0"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0"
                   style={{
                     backgroundColor: "#9A1E61",
                     fontFamily: "Cinzel, Georgia, serif",
@@ -155,7 +151,7 @@ export default function CookiePolicyPage() {
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-6">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm flex-shrink-0"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0"
                   style={{
                     backgroundColor: "#9A1E61",
                     fontFamily: "Cinzel, Georgia, serif",
@@ -353,7 +349,7 @@ export default function CookiePolicyPage() {
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-6">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm flex-shrink-0"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0"
                   style={{
                     backgroundColor: "#9A1E61",
                     fontFamily: "Cinzel, Georgia, serif",
@@ -464,7 +460,7 @@ export default function CookiePolicyPage() {
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-6">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm flex-shrink-0"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0"
                   style={{
                     backgroundColor: "#9A1E61",
                     fontFamily: "Cinzel, Georgia, serif",
@@ -500,7 +496,7 @@ export default function CookiePolicyPage() {
             <div className="mb-12">
               <div className="flex items-center gap-4 mb-6">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-cream text-sm flex-shrink-0"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0"
                   style={{
                     backgroundColor: "#9A1E61",
                     fontFamily: "Cinzel, Georgia, serif",
@@ -538,8 +534,8 @@ export default function CookiePolicyPage() {
             <div
               className="rounded-2xl p-8 md:p-10 mb-10"
               style={{
-                backgroundColor: "#F5EDE3",
-                boxShadow: "0 4px 24px rgba(74, 26, 61, 0.06)",
+                backgroundColor: "#9A1E61",
+                boxShadow: "0 4px 24px rgba(154, 30, 97, 0.15)",
               }}
             >
               <div className="flex items-center gap-4 mb-4">
@@ -548,16 +544,15 @@ export default function CookiePolicyPage() {
                   height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9A1E61"
+                  stroke="#FFFFFF"
                   strokeWidth="2"
                 >
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
                 <h2
-                  className="text-lg uppercase"
+                  className="text-lg uppercase text-white"
                   style={{
-                    color: "#4A1A3D",
                     fontFamily: "Cinzel, Georgia, serif",
                   }}
                 >
@@ -565,27 +560,24 @@ export default function CookiePolicyPage() {
                 </h2>
               </div>
               <p
-                className="text-sm md:text-base leading-relaxed mb-2"
+                className="text-sm md:text-base leading-relaxed mb-2 text-white/90"
                 style={{
-                  color: "#333333",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
-                <span className="font-semibold" style={{ color: "#4A1A3D" }}>Marley&apos;s Kraamzorg</span>
+                <span className="font-semibold text-white">Marley&apos;s Kraamzorg</span>
               </p>
               <p
-                className="text-sm mb-4"
+                className="text-sm mb-4 text-white/80"
                 style={{
-                  color: "#555555",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
                 Rotterdam, Nederland
               </p>
               <p
-                className="text-sm"
+                className="text-sm text-white/90"
                 style={{
-                  color: "#333333",
                   fontFamily: "var(--font-open-sans), system-ui, sans-serif",
                 }}
               >
@@ -593,8 +585,8 @@ export default function CookiePolicyPage() {
                 gerust contact met ons op via het{" "}
                 <a
                   href="/contact/"
-                  className="font-semibold transition-colors hover:underline"
-                  style={{ color: "#9A1E61" }}
+                  className="font-semibold transition-colors hover:underline text-white"
+                  style={{ textDecoration: "underline", textUnderlineOffset: "2px" }}
                 >
                   contactformulier
                 </a>{" "}
