@@ -16,7 +16,7 @@ const areaFAQ = [
 export default function WerkgebiedClient() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero - Huisstijlkleur #9A1E61 met witte tekst */}
       <section className="relative w-full h-[50vh] min-h-[350px] overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
@@ -27,29 +27,29 @@ export default function WerkgebiedClient() {
             sizes="100vw"
             priority
           />
-          {/* Light warm beige overlay — effen, geen gradient */}
-          <div className="absolute inset-0 bg-[#F5EDE3]/88" />
+          {/* Huisstijlkleur overlay #9A1E61 */}
+          <div className="absolute inset-0 bg-[#9A1E61]/88" />
         </div>
-        <div className="relative z-10 text-center px-4 pt-16 text-berry-dark">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/70 border border-berry-dark/10 rounded-full px-5 py-2 mb-6">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
+        <div className="relative z-10 text-center px-4 pt-16 text-white">
+          {/* Badge - aangepast voor witte tekst */}
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2 mb-6">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-cream/90">
+            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-white/90">
               Werkgebied
             </span>
           </div>
-          <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase text-berry-dark leading-tight">
+          <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase text-white leading-tight">
             Kraamzorg in uw regio
           </h1>
-          <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mt-6 mb-6" />
+          <div className="w-16 h-0.5 bg-white/40 mx-auto mt-6 mb-6" />
           <StarIcon
             size="lg"
             className="mx-auto"
-            fillColor="#9A1E61"
-            strokeColor="#4A1A3D"
+            fillColor="white"
+            strokeColor="white"
             animate
           />
         </div>
