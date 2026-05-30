@@ -48,41 +48,39 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero — Licht beige hero */}
-      <section
-        className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-[#F5EDE3]"
-      >
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
+      {/* Hero — Huisstijlkleur #9A1E61 met witte tekst */}
+      <section className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-[#9A1E61]">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-white">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/70 border border-berry-dark/10 rounded-full px-5 py-2 mb-6">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2 mb-6">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-berry-dark/80">
+            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-white/90">
               Marley&apos;s Kraamzorg — {area.naam}
             </span>
           </div>
           <h1
-            className="text-2xl md:text-4xl lg:text-5xl uppercase text-berry-dark leading-tight tracking-tight mb-6"
+            className="text-2xl md:text-4xl lg:text-5xl uppercase text-white leading-tight tracking-tight mb-6"
             style={{ fontFamily: "Cinzel, Georgia, serif" }}
           >
             {area.heroH1}
           </h1>
-          <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mb-6" />
-          <p className="font-body text-base md:text-lg text-berry-dark/90 max-w-2xl mx-auto mb-8 italic">
+          <div className="w-16 h-0.5 bg-white/40 mx-auto mb-6" />
+          <p className="font-body text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-8 italic">
             {area.heroSubtitle}
           </p>
           <div className="flex justify-center mb-8">
-            <StarIcon size="md" fillColor="#9A1E61" strokeColor="#4A1A3D" animate />
+            <StarIcon size="md" fillColor="white" strokeColor="white" animate />
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact/" className="btn-primary">
+            <Link href="/contact/" className="btn-primary bg-white text-[#9A1E61] hover:bg-gray-100">
               Meld je aan
             </Link>
             <a
               href="tel:+31645041484"
-              className="btn-outline border-berry-dark/30 text-berry-dark hover:bg-berry-dark hover:text-cream"
+              className="btn-outline border-white text-white hover:bg-white hover:text-[#9A1E61]"
             >
               Bel direct
             </a>
@@ -90,7 +88,7 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/50">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50">
           <span className="text-xs font-cinzel uppercase tracking-wider">Scroll</span>
           <svg
             width="20"
@@ -268,13 +266,13 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary py-20 md:py-32">
+      <section className="bg-[#9A1E61] py-20 md:py-32">
         <div className="container-main text-center">
-          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-cream mb-6">
+          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-white mb-6">
             Klaar voor jouw kraamzorg in {area.naam}?
           </h2>
-          <div className="w-16 h-0.5 bg-cream/50 mx-auto mb-8" />
-          <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <div className="w-16 h-0.5 bg-white/50 mx-auto mb-8" />
+          <p className="font-body text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
             Neem vandaag nog contact op voor een vrijblijvende kennismaking. Samen 
             bespreken we jouw wensen en kijken we hoe ik jouw kraamperiode in{" "}
             {area.naam} zo mooi mogelijk kan maken.
@@ -282,13 +280,13 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-cream text-primary shadow-glow hover:bg-blush hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-white text-[#9A1E61] shadow-glow hover:bg-gray-100 hover:-translate-y-0.5"
             >
               📝 Check beschikbaarheid
             </Link>
             <a
               href="tel:+31645041484"
-              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-cream/50 text-cream hover:bg-cream hover:text-primary"
+              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-white text-white hover:bg-white hover:text-[#9A1E61]"
             >
               📞 Bel direct
             </a>
