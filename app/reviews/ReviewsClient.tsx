@@ -1,8 +1,55 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { StarIcon } from "@/components/StarIcon";
 
 export default function ReviewsClient() {
+  const widgetRef = useRef<HTMLDivElement>(null);
+  const scriptLoaded = useRef(false);
+
+  useEffect(() => {
+    // Functie om de Elfsight widget te laden
+    const loadElfsightWidget = () => {
+      if (!widgetRef.current) return;
+
+      // Check of het script al bestaat, verwijder het anders om dubbel laden te voorkomen
+      const existingScript = document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      // Nieuw script aanmaken
+      const script = document.createElement("script");
+      script.src = "https://static.elfsight.com/platform/platform.js";
+      script.dataset.useServiceCore = "defer";
+      script.async = true;
+      
+      // Zodra het script geladen is, zorgen we dat de widget container opnieuw wordt geïnitialiseerd
+      script.onload = () => {
+        if (widgetRef.current && window.elfsight) {
+          // @ts-ignore - Elfsight heeft een globale functie om widgets te herinitialiseren
+          if (typeof window.elfsight?.refresh === "function") {
+            // @ts-ignore
+            window.elfsight.refresh();
+          }
+        }
+      };
+
+      document.body.appendChild(script);
+      scriptLoaded.current = true;
+    };
+
+    // Kleine vertraging om zeker te zijn dat de DOM klaar is
+    const timer = setTimeout(() => {
+      loadElfsightWidget();
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      // Optioneel: script niet verwijderen, anders laadt het te vaak
+    };
+  }, []);
+
   return (
     <>
       {/* ═══════ HERO MET REVIEWS ═══════ */}
@@ -29,7 +76,7 @@ export default function ReviewsClient() {
           <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6" style={{ opacity: 0.3 }} />
 
           {/* Uitleg over Lisa's zorg - alleen hier */}
-          <p className="font-body text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="font-body text-base md:text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
             Bij Marley&apos;s Kraamzorg ben ik, Lisa, dankbaar dat ik met liefde en zorg zoveel gezinnen
             heb mogen ondersteunen in de bijzondere periode na de geboorte. Jouw ervaring is niet
             alleen belangrijk voor mij, maar ook voor toekomstige ouders in Rotterdam en omgeving
@@ -50,12 +97,15 @@ export default function ReviewsClient() {
         </div>
       </section>
 
-      {/* ═══════ ALLEEN ELFSIGHT WIDGET (geen dubbele tekst) ═══════ */}
+      {/* ═══════ ELFSIGHT WIDGET (verbeterd laden) ═══════ */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
-          {/* Alleen de widget, geen herhaalde titels of uitleg */}
-          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-          <div className="elfsight-app-217006b8-8c72-4abf-a112-e77497452b93" data-elfsight-app-lazy></div>
+          {/* Widget container met ref voor betere controle */}
+          <div 
+            ref={widgetRef}
+            className="elfsight-app-217006b8-8c72-4abf-a112-e77497452b93"
+            data-elfsight-app-lazy
+          />
         </div>
       </section>
     </>
