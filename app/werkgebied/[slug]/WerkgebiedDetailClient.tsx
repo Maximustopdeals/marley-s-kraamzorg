@@ -265,8 +265,8 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-[#9A1E61] py-20 md:py-32">
+      {/* CTA Section - MET witruimte aan de onderkant */}
+      <section className="bg-[#9A1E61] py-20 md:py-28 mb-16">
         <div className="container-main text-center">
           <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-white mb-6">
             Klaar voor jouw kraamzorg in {area.naam}?
