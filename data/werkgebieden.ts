@@ -56,7 +56,7 @@ export const werkgebieden: WerkgebiedData[] = [
     faq: [
       {
         question: "In welke wijken van Rotterdam werk je?",
-        answer: "Ik werk in alle wijken van Rotterdam: van Kralingen en Centrum tot Noord, Zuid, Hillegersberg, Overschie en IJsselmonde. Woont u net buiten Rotterdam? Neem gerust contact op, want ook in omliggende gemeenten ben ik actief.",
+        answer: "Ik werk in vele wijken van Rotterdam: van Kralingen en Prins Alexander tot Noord, Hillegersberg, Bergschenhoek en Berkel en Rodenrijs. Woont u net buiten Rotterdam? Neem gerust contact op, want ook in omliggende gemeenten ben ik actief.",
       },
       {
         question: "Hoe snel ben je in Rotterdam ter plaatse?",
