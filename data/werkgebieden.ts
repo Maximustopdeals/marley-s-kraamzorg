@@ -23,7 +23,7 @@ export const werkgebieden: WerkgebiedData[] = [
     naam: "Rotterdam",
     metaTitle: "Kraamzorg Rotterdam | Persoonlijk & Met 1 Vast Gezicht | Marley's Kraamzorg",
     metaDescription:
-      "Op zoek naar kraamzorg in Rotterdam? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht in Kralingen, Centrum, Noord, Zuid & meer. 24/7 bereikbaar.",
+      "Op zoek naar kraamzorg in Rotterdam? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht in Kralingen, Noord & Oost. 24/7 bereikbaar.",
     heroH1: "Kraamzorg Rotterdam | Marley's Kraamzorg",
     heroSubtitle:
       "Persoonlijke kraamzorg met 1 vast gezicht in Rotterdam — van Kralingen tot Hillegersberg",
@@ -49,13 +49,9 @@ export const werkgebieden: WerkgebiedData[] = [
       "Ik werk in alle wijken van Rotterdam. Hieronder een overzicht van de stadsdelen waar ik regelmatig kraamzorg verleen:",
     wijken: [
       "Kralingen-Crooswijk — Populair bij jonge gezinnen, nabij het Kralingse Bos",
-      "Rotterdam-Centrum — Voor ouders in de binnenstad met appartementen",
       "Rotterdam-Noord — Inclusief Blijdorp, Oude Noorden en Agniesebuurt",
-      "Rotterdam-Zuid — Van Katendrecht tot Charlois en Feijenoord",
       "Hillegersberg-Schiebroek — Rustige woonwijk met veel groen",
-      "Overschie — Dorpse sfeer aan de rand van de stad",
-      "IJsselmonde — Gezinsvriendelijke wijk met ruime woningen",
-      "Prins Alexander — Inclusijk Oosterflank en Zevenkamp",
+      "Prins Alexander — Inclusief Oosterflank, Ommoord, Zevenkamp en Nesselande",
     ],
     faq: [
       {
